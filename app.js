@@ -24,10 +24,18 @@ const DemoAppViewport = {
 	}
 };
 
+
+//button.onclick = function () {
+//    this.btnClick = (this.btnClick || 0) + 1;
+//    if (this.btnClick == 3) {
+//        this.disabled = true;
+//    }
+//};
+
 var timerId = setTimeout(function tick() {
 	objectbtn.style.display = 'block';
 	timerId = setTimeout(tick, 2000);
-  }, 2000);
+}, 2000);
 
 let objectbtn = document.getElementById('objectbtn');
 let collectobject = document.getElementById('collectobject');
