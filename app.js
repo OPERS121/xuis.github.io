@@ -24,15 +24,17 @@ const DemoAppViewport = {
 	}
 };
 
-enemy = []; 
-enemy.push({x:0,y:0});
-function game(){
-  for(i in enemy){
-    ctx.fillRect(enemy[i].x,enemy[i].y,32,32);
-  }
-}
-
-setInterval(game,1);
+let collectobject = document.getElementById("collectobject");
+collectobject.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 1!");
+		item = "1";
+		tg.MainButton.show();
+	}
+});
 
 const imageList = [
 	'img/background.png',
@@ -51,7 +53,7 @@ const imageList = [
 	console.log(numImage >= imageList.length)
 	console.log(numImage)
 	img.src = imageList[numImage]
-  })
+})
 
 let usercard = document.getElementById("usercard");
 
