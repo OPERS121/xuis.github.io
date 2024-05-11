@@ -79,10 +79,6 @@ body {
     border-radius: 5px;
 }
 
-.btn:hover {
-	background: rgb(10, 93, 218);
-}
-
 .usercard {
 	text-align: center;
 }
