@@ -17,7 +17,7 @@ body {
     left: 50%;
     margin-right: -50%;
     border-radius: 10px;
-    width: 25%;
+    width: 30%;
     height: 15%;
     transform: translate(-50%, -50%);
     background: rgb(21, 107, 239);
@@ -115,7 +115,7 @@ body {
         }
 
         .viewport-stable_border:before {
-            background: green;
+            background: rgb(255, 255, 255);
             left: 0;
             right: auto;
         }
@@ -129,9 +129,10 @@ body {
             right: 0;
             top: 0;
             bottom: 0;
-            border: 2px dashed gray;
+            border: 2px solid rgb(0, 0, 0);
         }
 
         .viewport-stable_border:after {
-            border-color: green;
+            border-color: rgb(255, 255, 255);
+            backdrop-filter: blur(-50px);
         }
