@@ -18,6 +18,12 @@ body {
     height: 100%;
 }
 
+.classbutton {
+	display: flex;
+  justify-content: center;
+  border: 2px solid blue;
+}
+
 .btn {
 	display: inline-block;
 	padding: 10px 20px;
@@ -86,10 +92,6 @@ body {
 
         .viewport-stable_border:after {
             border-color: green;
-        }
-
-        .img {
-            margin-bottom: auto;
         }
 
 
