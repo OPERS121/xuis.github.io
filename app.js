@@ -34,8 +34,8 @@ const DemoAppViewport = {
 
 var timerId = setTimeout(function tick() {
 	objectbtn.style.display = 'block';
-	timerId = setTimeout(tick, 2000);
-}, 2000);
+	timerId = setTimeout(tick, 5000);
+}, 5000);
 
 let objectbtn = document.getElementById('objectbtn');
 let collectobject = document.getElementById('collectobject');
@@ -47,25 +47,6 @@ objectbtn.addEventListener('click', () => {
 	objectbtn.style.display = 'none';
   }, 3000);
 });
-
-const imageList = [
-	'img/background.png',
-	'img/background1.png',
-  ]
-  const img = document.querySelector('.img')
-  const next = document.getElementById('filtertrigger')
-  var numImage = 0
-  img.src = imageList[numImage]
-  
-  next.addEventListener('click', () => {
-	numImage++
-	if (numImage >= imageList.length) {
-	  numImage = 0
-	}
-	console.log(numImage >= imageList.length)
-	console.log(numImage)
-	img.src = imageList[numImage]
-})
 
 let usercard = document.getElementById("usercard");
 
