@@ -10,13 +10,12 @@ body {
 }
 
 .enter {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+	background-color: rgba(0, 0, 0, 0);
 }
 
 .enter .img {
-    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -133,4 +132,45 @@ body {
 
         .viewport-stable_border:after {
             border-color: green;
+        }
+
+
+
+        .blockA {
+            position: absolute;
+            width: 980px;
+            height: 600px;
+            line-height: 150px;
+            text-align: center;
+            color: #FFF;
+            opacity: 1;
+        }
+        
+        .blockB {
+            position: absolute;
+            width: 980px;
+            height: 600px;
+            line-height: 150px;
+            text-align: center;
+            color: #FFF;
+            opacity: 0;
+        }
+        
+        .blockA {
+            background: #060;
+        }
+        .blockB {
+            background: #036;
+        }
+        .showA , .showB {
+            display: inline-block;
+            padding: 10px;
+        }
+        .part {
+            float: left;
+            margin-right: 50px;
+        }
+        .active {
+            margin: 0;
+            z-index: 10;
         }
