@@ -30,7 +30,7 @@ collectobject.addEventListener("click", function(){
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("Вы выбрали товар 1!");
+		tg.MainButton.setText("Вы получили 30 COIN");
 		item = "1";
 		tg.MainButton.show();
 	}
