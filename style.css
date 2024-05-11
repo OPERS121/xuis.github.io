@@ -21,7 +21,7 @@ body {
 .classbutton {
 	display: flex;
     justify-content: center;
-    margin-top: 15%;
+    text-align: center;
 }
 
 .btn {
