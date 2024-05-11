@@ -64,10 +64,10 @@ body {
 
 .btnenter {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    -ms-transform: translate(-50%, -5%);
+    transform: translate(-50%, -10%);
+    -ms-transform: translate(-50%, -10%);
     background: rgb(21, 107, 239);
     color: #fff;
     font-size: 16px;
