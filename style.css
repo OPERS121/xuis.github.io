@@ -20,6 +20,42 @@ body {
     position: absolute;
 }
 
+.collectobject {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    border-radius: 10px;
+    width: 15%;
+    height: 15%;
+    transform: translate(-50%, -50%);
+    background: rgb(21, 107, 239);
+}
+
+.collectobject .text {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+.objectbtn {
+    position: fixed;
+    bottom: 42%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    -ms-transform: translate(-50%, -42%);
+    display: none;
+    text-align: center;
+}
+
 .container {
     display: none;
 }
@@ -37,16 +73,6 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-}
-
-.object {
-    position: fixed;
-    bottom: 42%;
-    left: 50%;
-    transform: translate(-50%, -42%);
-    -ms-transform: translate(-50%, -42%);
-    display: flex;
-    text-align: center;
 }
 
 .classbuttonenter {
