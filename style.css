@@ -20,8 +20,9 @@ body {
     width: 45%;
     height: 15%;
     transform: translate(-50%, -50%);
-    background: rgb(21, 107, 239);
+    background: rgba(21, 108, 239, 0.95);
 }
+
 
 .collectobject .text {
     position: absolute;
@@ -74,7 +75,7 @@ body {
     left: 50%;
     transform: translate(-50%, -0.5%);
     -ms-transform: translate(-50%, -0.5%);
-    background: rgb(21, 107, 239);
+    background: rgba(21, 108, 239, 0.95);
     color: #fff;
     font-size: 16px;
     padding: 18px 30px;
@@ -129,9 +130,11 @@ body {
             right: 0;
             top: 0;
             bottom: 0;
-            border: 1px solid rgb(0, 0, 0);
         }
 
         .viewport-stable_border:after {
             border-color: rgb(255, 255, 255);
+            -webkit-box-shadow: inset 0px 100px 80px -80px rgba(0,0,0,0.95);
+            -moz-box-shadow: inset 0px 100px 80px -80px rgba(0,0,0,0.95);
+            box-shadow: inset 0px 100px 80px -80px rgba(0,0,0,0.95);
         }
