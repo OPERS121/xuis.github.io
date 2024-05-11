@@ -24,16 +24,20 @@ const DemoAppViewport = {
 	}
 };
 
-let collectobject = document.getElementById("collectobject");
-collectobject.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы получили 30 COIN");
-		item = "1";
-		tg.MainButton.show();
-	}
+var timerId = setTimeout(function tick() {
+	objectbtn.style.display = 'block';
+	timerId = setTimeout(tick, 2000);
+  }, 2000);
+
+let objectbtn = document.getElementById('objectbtn');
+let collectobject = document.getElementById('collectobject');
+
+objectbtn.addEventListener('click', () => {
+	collectobject.style.display = 'block';
+  setTimeout(() => {
+    collectobject.style.display = 'none';
+	objectbtn.style.display = 'none';
+  }, 3000);
 });
 
 const imageList = [
