@@ -40,11 +40,11 @@ body {
 }
 
 .object {
-    position: absolute;
-    bottom: 37%;
+    position: fixed;
+    bottom: 42%;
     left: 50%;
-    transform: translate(-50%, -37%);
-    -ms-transform: translate(-50%, -37%);
+    transform: translate(-50%, -42%);
+    -ms-transform: translate(-50%, -42%);
     display: flex;
     text-align: center;
 }
