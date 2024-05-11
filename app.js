@@ -34,19 +34,6 @@ ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
 
-var links = $('.part a');
-
-links.click(function(){
-    var indx = $(this).index();
-    var blocks = $(this).siblings('div');
-    blocks.animate({
-        opacity: 0
-    }).eq(indx).animate({
-        opacity: 1
-    });
-});
-
-
 
 
 
