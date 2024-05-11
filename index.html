@@ -8,16 +8,10 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="enter" >
-		<div class="classbuttonenter">
-			<img src="img/background.png" alt="" class="img">
-			<div class="avoid-click">Клики здесь не действуют</div>
-			<button id="filtertrigger" class="btnenter">ВОЙТИ</button>
-		</div>
-	</div>
 	<div id="container" class="container">
+		<img src="img/background1.png" alt="" class="img">
 		<div class="text" style="top: 1.5vh;">Первым шагом к незабываемым приключениям стал выбор направления.</div>
-		<div id="shop" class="btn">МАГАЗИН ГУСЕЙ</div>
+		<div id="shop" class="btn">МАГАЗИН</div>
 	</div>
 	</div>
 	<img src="img/object.png" alt="" id="objectbtn" class="objectbtn">
@@ -28,27 +22,5 @@
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script src="app.js"></script>
 	<div class="viewport-stable_border"></div>
-	<script>
-		$(function() {
-				var btn = $(".btnenter"), block = $(".container");
-		
-				$(document).click(function(event) {
-						var target = $(event.target),cur;
-						if (target.is(".btnenter")) {
-							event.preventDefault();
-							var index = btn.index(target);
-							cur = block.eq(index).fadeIn();
-							target.toggleClass("open")
-						}
-						if (target.closest(".container").length) return;
-						block.not(cur).fadeIn();
-						btn.not(target).removeClass("open")
-				})
-				document.getElementById('filtertrigger').onclick = function () {
-	            document.getElementById('filtertrigger').hidden = true;
-				document.getElementById('shop').hidden = false;
-            };
-		});
-	</script>
 </body>
 </html>
