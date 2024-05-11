@@ -16,7 +16,7 @@
 	</div>
 	<div id="container" class="container">
 		<div class="text" style="top: 1.5vh;">Первым шагом к незабываемым приключениям стал выбор направления.</div>
-		<div class="btn">МАГАЗИН ГУСЕЙ</div>
+		<div id="shop" class="btn">МАГАЗИН ГУСЕЙ</div>
 	  </div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -41,6 +41,7 @@
 				})
 				document.getElementById('filtertrigger').onclick = function () {
 	            document.getElementById('filtertrigger').hidden = true;
+				document.getElementById('shop').hidden = false;
             };
 		});
 	</script>
