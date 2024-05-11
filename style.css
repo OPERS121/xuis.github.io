@@ -10,6 +10,8 @@ body {
 	color-scheme: var(--tg-color-scheme);
 }
 
+.avoid-click { pointer-events: none; /* Попробуйте кликнуть сейчас! */ }
+
 .enter {
 	position: fixed;
     width: 100%;
@@ -27,7 +29,7 @@ body {
     left: 50%;
     margin-right: -50%;
     border-radius: 10px;
-    width: 20%;
+    width: 25%;
     height: 15%;
     transform: translate(-50%, -50%);
     background: rgb(21, 107, 239);
