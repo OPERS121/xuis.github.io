@@ -33,13 +33,3 @@ p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
-
-
-function myFunction() {
-	var element = document.getElementById("myDIV");
-	element.classList.toggle("container");
- }
-
-
-
-
