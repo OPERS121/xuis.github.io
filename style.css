@@ -10,18 +10,6 @@ body {
 	color-scheme: var(--tg-color-scheme);
 }
 
-.avoid-click { pointer-events: none; /* Попробуйте кликнуть сейчас! */ }
-
-.enter {
-	position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-.enter .img {
-    position: absolute;
-}
-
 .collectobject {
     display: none;
     position: absolute;
@@ -59,12 +47,15 @@ body {
 }
 
 .container {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;	
+	justify-content: center;
 }
 
 .container .img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
 }
 
 .container .text {
@@ -77,32 +68,12 @@ body {
     justify-content: center;
 }
 
-.classbuttonenter {
-	display: flex;	
-	justify-content: center;
-}
-
 .btn {
     position: absolute;
     bottom: 0.5%;
     left: 50%;
     transform: translate(-50%, -0.5%);
     -ms-transform: translate(-50%, -0.5%);
-    background: rgb(21, 107, 239);
-    color: #fff;
-    font-size: 16px;
-    padding: 18px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.btnenter {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-    -ms-transform: translate(-50%, -5%);
     background: rgb(21, 107, 239);
     color: #fff;
     font-size: 16px;
