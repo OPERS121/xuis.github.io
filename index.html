@@ -11,11 +11,11 @@
 	<div class="enter" >
 		<div class="classbuttonenter">
 			<img src="img/background.png" alt="" class="img">
-			<button onclick="myFunction()" class="btnenter">ВОЙТИ</button>
+			<button id="filtertrigger" class="btnenter">ВОЙТИ</button>
 			<div class="usercard" id="usercard"></div>
 		</div>
 	</div>
-	<div id="myDIV" class="container">
+	<div id="box" class="container">
 		<img src="img/background.png" alt="" class="img">
 		<div class="text" style="top: 1.5vh;">Первым шагом к незабываемым приключениям стал выбор направления.</div>
 		<div class="classbutton">
@@ -26,9 +26,27 @@
 		</div>
 	  </div>
 	</div>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script src="app.js"></script>
 	<div class="viewport-stable_border"></div>
+	<script>
+		$(function() {
+				var btn = $(".btnenter"), block = $(".container");
+		
+				$(document).click(function(event) {
+						var target = $(event.target),cur;
+						if (target.is(".btnenter")) {
+							   event.preventDefault();
+							   var index = btn.index(target);
+							   cur = block.eq(index).slideToggle();
+							   target.toggleClass("open")
+						 }
+						if (target.closest(".container").length) return;
+						block.not(cur).slideUp("slow");
+						btn.not(target).removeClass("open")
+				})
+		});
+	</script>
 </body>
 </html>
