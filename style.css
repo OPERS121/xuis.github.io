@@ -39,6 +39,16 @@ body {
     justify-content: center;
 }
 
+.object {
+    position: absolute;
+    bottom: 37%;
+    left: 50%;
+    transform: translate(-50%, -37%);
+    -ms-transform: translate(-50%, -37%);
+    display: flex;
+    text-align: center;
+}
+
 .classbuttonenter {
 	display: flex;	
 	justify-content: center;
