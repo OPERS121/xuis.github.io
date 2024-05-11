@@ -19,11 +19,10 @@ body {
 }
 
 .classbutton {
-	display: flex;
+	display: grid;
     justify-content: center;
     text-align: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
 }
 
 .btn {
