@@ -45,6 +45,7 @@ btnenter.addEventListener('click', () => {
 	background.style.display = 'none';
 	container.style.display = 'block';
 	background1.style.display = 'block';
+	imggus.style.display = 'block';
   }, 3000);
 });
 
@@ -67,10 +68,10 @@ var arr = ["gus1.png", "gus2.png", "gus3.png", "gus4.png", "gus5.png", "gus6.png
 var path = "img/imggus/";
 var i = 0
 
-var img = "imggus";
-img = document.getElementById(img);
+var imggus = "imggus";
+imggus = document.getElementById(imggus);
 setInterval(function(){
-    img.src = path+arr[i];
+    imggus.src = path+arr[i];
     i = ++i%arr.length;
 }, 130);
 
