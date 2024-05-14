@@ -29,7 +29,7 @@
 					<div class="g-text">$TON</div>
 					<div id="ton-count" class="v-text">0</div>
 				</div>
-				<button onclick="transaction()">+</button>
+				<a href="ton://transfer/UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq?amount=1">25</a>
 			</div>
 			<div class="ui-counter" id="ton-connect">
 
@@ -51,24 +51,6 @@
 			manifestUrl: 'https://github.com/OPERS121/xuis.github.io/tonconnect-manifest.json',
 			buttonRootId: 'ton-connect'
 		});
-
-		async function transaction() {
-			const transaction = {
-				validUntil: Math.round(Date.now() / 1000) + 10,
-				messages: [
-					{
-						address: "UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq",
-						amount: "10"
-					}
-				]
-			};
-
-			try {
-				await tonConnectUI.sendTransaction(transaction);
-			} catch (e) {
-				console.error(e);
-			}
-		}
 	</script>
 </body>
 </html>
