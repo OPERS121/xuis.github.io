@@ -38,7 +38,7 @@ body {
 }
 
 .container, .entermenu {
-    width: 400px;
+    width: 384px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +61,7 @@ body {
 
 .ui-top {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .ui-counter {
@@ -71,6 +71,8 @@ body {
     border-radius: 18px;
     color: #fff;
     height: 55px;
+    margin-top: 5px;
+    margin-left: 10px;
     align-items: center;
     display: flex;
     width: 120px;
