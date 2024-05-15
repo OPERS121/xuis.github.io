@@ -71,11 +71,11 @@ body {
     border-radius: 18px;
     color: #fff;
     height: 55px;
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
     align-items: center;
     display: flex;
-    width: 120px;
+    width: 117px;
 }
 
 .ui-counter img {
