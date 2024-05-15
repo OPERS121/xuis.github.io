@@ -38,7 +38,7 @@ body {
 
 .container, .entermenu {
     position: absolute;
-    width: 384px;
+    width: 400px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,7 +46,7 @@ body {
 }
 
 .background {
-    width: 384px;
+    width: 400px;
 }
 
 .container .text {
