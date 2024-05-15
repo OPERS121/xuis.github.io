@@ -24,14 +24,6 @@ const DemoAppViewport = {
 	}
 };
 
-
-//button.onclick = function () {
-//    this.btnClick = (this.btnClick || 0) + 1;
-//    if (this.btnClick == 3) {
-//        this.disabled = true;
-//    }
-//};
-
 let circle = document.getElementById('circle');
 let btnenter = document.getElementById('btnenter');
 let container = document.getElementById('container');
@@ -63,17 +55,3 @@ objectbtn.addEventListener('click', () => {
 	objectbtn.style.display = 'none';
   }, 3000);
 });
-
-var arr = ["chiken1.png", "chiken2.png"];
-var path = "img/imggus/";
-var i = 0
-
-var imggus = "cow_buti";
-imggus = document.getElementById(imggus);
-setInterval(function(){
-    imggus.src = path+arr[i];
-    i = ++i%arr.length;
-}, 250);
-
-//const number = 3500;
-//console.log(new Intl.NumberFormat().format(number));
