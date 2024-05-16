@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="style.css">
+	<title>MYGAME</title>
+</head>
+<body>
+	<div class="entermenu">
+		<img src="img/background.png" alt="" id="background" class="background">
+		<img src="img/background1.png" alt="" id="background1" class="background" style="display: none;">
+		<div><a id="btnenter" class="btnenter">ВХОД</a></div>
+		<div id="circle" class="circle" style="display: none;"></div>
+	</div>
+	<div id="container" class="container" style="display: none;">
+		<div class="ui-top">
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\coin.png">
+				<div class="value-text noselect">
+					<div class="g-text">$COIN</div>
+					<div class="v-text" id="balance">0</div>
+				</div>
+			</div>
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\ton.png">
+				<div class="value-text noselect">
+					<div class="g-text">$TON</div>
+					<div id="ton-count" class="v-text">0</div>
+				</div>
+				<button onclick="transaction()">+</button>
+			</div>
+			<div class="ui-counter" id="ton-connect">
+			</div>
+		</div>
+		<div class="ui-bottom">
+			<div class="ui-counter" onclick="openModalEat()" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\object.png">
+				<div class="value-text noselect">
+					<div class="g-text">ЕДА</div>
+				</div>
+			</div>
+			<div class="ui-counter" onclick="buyChicken()" style="cursor: pointer;">
+				<img with="28px" height="28px" src="img\imggus\chiken1.png">
+				<div class="value-text">
+					<div class="g-text">МАГАЗИН</div>
+					<div class="v-text">0.15 $TON</div>
+				</div>
+			</div>
+			<div class="ui-counter" onclick="openModalTask()" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\object.png">
+				<div class="value-text noselect">
+					<div class="g-text">ЗАДАНИЕ</div>
+				</div>
+			</div>
+		</div>
+		<img src="img/object.png" alt="" id="objectbtn" class="img" style="top: 50%; left: 50%;">
+	</div>
+	</div>
+	<div id="collectobject" class="collectobject">
+		<div class="text">Поздравляем! Вы успешно получили 0 COIN</div>
+	</div>
+	<div id="ton-connect"></div>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+	<script src="app.js"></script>
+	<div class="viewport-stable_border"></div>
+	<script>
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://opers121.github.io/xuis.github.io/tonconnect-manifest.json',
+			buttonRootId: 'ton-connect'
+
+		});
+
+		async function transaction() {
+			const transaction = {
+				validUntil: Math.round(Date.now() / 1000) + 10,
+				messages: [
+					{
+						address: "0:UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq",
+						amount: "0.1"
+					}
+				]
+			};
+
+			try {
+				await tonConnectUI.sendTransaction(transaction);
+			} catch (e) {
+				console.error(e);
+			}
+		}
+	</script>
+</body>
+</html>
