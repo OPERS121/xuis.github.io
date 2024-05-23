@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css">
+	<title>MYGAME</title>
+</head>
+<body>
+	<div class="entermenu">
+		<img src="img/background.png" alt="" id="background" class="background">
+		<img src="img/background1.png" alt="" id="background1" class="background" style="display: none;">
+		<div><a id="btnenter" class="btnenter">ВХОД</a></div>
+		<div id="circle" class="circle" style="display: none;"></div>
+	</div>
+	<div id="container" class="container" style="display: none;">
+		<div class="ui-top">
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\coin.png">
+				<div class="value-text noselect">
+					<div class="g-text">$COIN</div>
+					<div class="v-text" id="balance">0</div>
+				</div>
+			</div>
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\ton.png">
+				<div class="value-text noselect">
+					<div class="g-text">$TON</div>
+					<div id="ton-count" class="v-text">0</div>
+				</div>
+				<button onclick="transaction()">+</button>
+			</div>
+			<div class="ui-ton" id="ton-connect">
+			</div>
+		</div>
+		<div class="ui-bottom">
+			<div class="ui-counters" id="openModalEat" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\eat.png">
+				<div class="value-text noselect">
+					<div class="g-text">EAT</div>
+				</div>
+			</div>
+			<div class="ui-counters" id="buyChicken" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\shop.png">
+				<div class="value-text">
+					<div class="g-text">SHOP</div>
+				</div>
+			</div>
+			<div class="ui-counters" id="openModalTask" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\task.png">
+				<div class="value-text noselect">
+					<div class="g-text">TASK</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="modal_eat" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="margin-top: 45px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;">
+                <p style="font-family: Minecraft Rus; color: #48312E; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">МАГАЗИН ЕДЫ</p>
+                <p style="font-family: Minecraft Rus; color: #90625D; font-size: 24px; padding: 5px; margin: 0; padding-left: 15px;">ЕДА ДЛЯ КУРИЦЫ 0/5</p>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\eat1.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -35px; width: 110px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Сено
+                        </div>
+                        <div class="description-text" style="font-family: Minecraft Rus; color: #635c5a; font-size: 15px;">
+                            Обычного качества
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" onclick="buyeat(1)" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">
+                            0.1 $TON
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\eat2.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -35px; width: 110px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Сено
+                        </div>
+                        <div class="description-text" style="font-family: Minecraft Rus; color: #635c5a; font-size: 15px;">
+                            Высокого качества
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" onclick="buyeat(2)" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">
+                            0.5 $TON
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\eat3.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -35px; width: 110px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Сено
+                        </div>
+                        <div class="description-text" style="font-family: Minecraft Rus; color: #635c5a; font-size: 15px;">
+                            Премиального качества
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" onclick="buyeat(3)" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">
+                            1.2 $TON
+                        </div>
+                    </div>
+                </div>
+				<div id="closeModal" class="closeModal">
+					ЗАКРЫТЬ
+				</div>
+            </div>
+        </div>
+		<div class="modal" id="modal_task" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="margin-top: 45px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;">
+                <p style="font-family: Minecraft Rus; color: #48312E; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">Получайте бонусы, выполняя задания!</p>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task1.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -10px; width: 140px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Подписка на канал
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+						<a class="modal-btn" href="https://t.me/birdtonchanel" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">2 $COIN</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task2.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -10px; width: 140px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Вступить в чат
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <div id="q:3" onclick="claimquest(3)" class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">
+                            2 $COIN
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 15px; justify-content: space-between;">
+                    <div class="img-container" style="width: 67px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task3.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -10px; width: 140px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Купить курицу
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <div id="q:3" onclick="claimquest(3)" class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; padding: 10px 10px 10px 10px; border-radius: 5px; cursor: pointer; text-align: center;">
+                            2 $COIN
+                        </div>
+                    </div>
+                </div>
+				<div id="closeModalTask" class="closeModal">
+					ЗАКРЫТЬ
+				</div>
+            </div>
+        </div>
+		<img src="img/object.png" alt="" id="objectbtn" class="img" style="margin-top: -55vh; margin-left: 45px; display: none;">
+        <div id="collectobject" class="collectobject" style="display: none;">Поздравляю! Вы успешно получили свои $COIN</div>
+	</div>
+	</div>
+	<div class="ui-ton" id="ton-connect" style="background: none;"></div>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+	<script src="app.js"></script>
+	<div class="viewport-stable_border"></div>
+	<script>
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://opers121.github.io/xuis.github.io/tonconnect-manifest.json',
+			buttonRootId: 'ton-connect'
+
+		});
+
+		async function transaction() {
+			const transaction = {
+				validUntil: Math.round(Date.now() / 1000) + 10,
+				messages: [
+					{
+						address: "0:UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq",
+						amount: "0.1"
+					}
+				]
+			};
+
+			try {
+				await tonConnectUI.sendTransaction(transaction);
+			} catch (e) {
+				console.error(e);
+			}
+		}
+	</script>
+</body>
+</html>
