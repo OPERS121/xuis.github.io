@@ -1,0 +1,219 @@
+body {
+	--bg-color: var(--tg-theme-bg-color, #fff);
+	background-color: var(--bg-color);
+	color: var(--tg-theme-text-color, #222);
+	margin: 0;
+	padding: 0;
+	color-scheme: var(--tg-color-scheme);
+    overflow: hidden;
+    font-family: "Minecraft Rus", serif;
+}
+
+.collectobject {
+    position: fixed;
+    font-family: "Minecraft Rus", serif;
+    color: #fff;
+    text-align: center;
+    top: 15%;
+    left: 15%;
+    pointer-events: none;
+    width: 150px;
+    height: 70px;
+    transform: translate(15%, -15%);
+}
+
+.container, .entermenu {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -112px;
+}
+
+.background {
+    width: 400px;
+}
+
+.container .text {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.ui-top {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 85vh;
+}
+
+.modal {
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    font-family: "Minecraft Rus", serif;
+    width: 400px;
+    height: 100%;
+    background-image: url("img/backgroundTask.png");
+}
+
+.closeModal {
+    background-image: url("img/item.png");
+    font-family: "Minecraft Rus", serif;
+    color: #312e2f;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 230px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 6.6;
+    height: 15%;
+}
+
+.go3974562317, .go817518207{
+    background-color: transparent !important;
+    min-width: 115px;
+}
+.go3974562317 path{
+    fill:#90625d;
+}
+
+.go1487791704, .go1140934594{
+    color: #48312e !important;
+}
+
+.go157313249{
+    min-width: auto !important;
+}
+
+.active-quest{
+    background: #dddddd !important; 
+}
+
+.ui-counter {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    background-image: url("img/item.png");
+    display: flex;
+    width: 120px;
+}
+
+.ui-ton {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    display: flex;
+    width: 120px;
+}
+
+.ui-counter img {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.ui-counters {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    background-image: url("img/item.png");
+    display: flex;
+    width: 120px;
+}
+
+.ui-counters img {
+    margin-top: 5px;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+
+.value-text {
+    line-height: 1.1;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.g-text {
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: "Minecraft Rus", serif;
+    color: #222;
+}
+
+.v-text {
+    font-size: 14px;
+    font-family: "Minecraft Rus", serif;
+    color: #568f20;
+}
+
+.btnenter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    background-image: url("img/item.png");
+    background-repeat: no-repeat;
+    height: 15%;
+    color: #312e2f;
+    width: 150px;
+    font-family: "Minecraft Rus", serif;
+    font-size: 18px;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+    line-height: 6.2;
+}
+
+.imggus {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+}
+
+.circle {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 7px solid rgba(255, 255, 255, .1);
+    border-top: 7px solid #fff;
+    animation: animate 1s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -0.5%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -0.5%) rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: "Minecraft Rus";
+    src: local("Minecraft Rus"), local("Minecraft Rus"),
+      url("./fonts/Minecraft Rus.ttf");
+    font-weight: bold;
+  }
