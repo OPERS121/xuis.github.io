@@ -1,0 +1,335 @@
+body {
+	--bg-color: var(--tg-theme-bg-color, #fff);
+	background-color: var(--bg-color);
+	color: var(--tg-theme-text-color, #222);
+	margin: 0;
+	padding: 0;
+	color-scheme: var(--tg-color-scheme);
+    overflow: hidden;
+    font-family: "Minecraft Rus", serif;
+}
+
+.collectobject {
+    position: fixed;
+    font-family: "Minecraft Rus", serif;
+    color: #fff;
+    text-align: center;
+    top: 18%;
+    pointer-events: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.container, .entermenu {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -112px;
+}
+
+.background {
+    width: 400px;
+}
+
+.container .text {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.ui-top {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 85vh;
+}
+
+.modal {
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    font-family: "Minecraft Rus", serif;
+    width: 400px;
+    height: 100%;
+    background-image: url("img/backgroundTask.png");
+}
+
+
+.closeModal {
+    background-image: url("img/item.png");
+    font-family: "Minecraft Rus", serif;
+    color: #312e2f;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 250px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 6.6;
+    height: 15%;
+}
+
+.closeModalWheel {
+    color: #312e2f;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.go3974562317, .go817518207{
+    background-color: transparent !important;
+    min-width: 115px;
+}
+.go3974562317 path{
+    fill:#90625d;
+}
+
+.go1487791704, .go1140934594{
+    color: #48312e !important;
+}
+
+.go157313249{
+    min-width: auto !important;
+}
+
+.active-quest{
+    background: #dddddd !important; 
+}
+
+.ui-counter {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    background-image: url("img/item.png");
+    display: flex;
+    width: 120px;
+}
+
+.ui-ton {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    display: flex;
+    width: 120px;
+}
+
+.ui-counter img {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.imagegif {
+    background-image: url(img/heart.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 70px;
+    left: 165px;
+    top: 210px;
+    position: absolute;
+    animation: fade 1.25s ease forwards;
+}
+  
+  @keyframes fade {
+    from {
+     visibility: visible;
+     }
+     to {
+      visibility: hidden;
+     }
+   }
+
+.click {
+    position:relative;
+    width: 400px;
+    top: 270px;
+    left: 0;
+    z-index:99999999999;
+}
+
+.click img {
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 150px;
+    height: 150px;
+}
+
+.ui-counters {
+    height: 75px;
+    margin: 5px;
+    align-items: center;
+    background-image: url("img/item.png");
+    display: flex;
+    width: 120px;
+}
+
+.ui-counters img {
+    margin-top: 5px;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+
+.value-text {
+    line-height: 1.1;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.g-text {
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: "Minecraft Rus", serif;
+    color: #222;
+}
+
+.v-text {
+    font-size: 14px;
+    font-family: "Minecraft Rus", serif;
+    color: #568f20;
+}
+
+.btnenter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    background-image: url("img/item.png");
+    background-repeat: no-repeat;
+    height: 15%;
+    color: #312e2f;
+    width: 150px;
+    font-family: "Minecraft Rus", serif;
+    font-size: 18px;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+    line-height: 6.2;
+}
+
+.circle {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 7px solid rgba(255, 255, 255, .1);
+    border-top: 7px solid #fff;
+    animation: animate 1s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -0.5%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -0.5%) rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: "Minecraft Rus";
+    src: local("Minecraft Rus"), local("Minecraft Rus"),
+      url("./fonts/Minecraft Rus.ttf");
+    font-weight: bold;
+  }
+  
+  .modalwheel {
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    font-family: "Minecraft Rus", serif;
+    width: 400px;
+    height: 100%;
+    background-image: url("img/backgroundwheelspin.png");
+}
+
+  .app {
+    position: relative;
+    width: 325px;
+    height: 120px;
+    top: -375px;
+    left: 40px;
+  }
+  .app .scope {
+    overflow: hidden;
+  }
+  .app .scope .list {
+    position: relative;
+    display: inline-flex;
+    left: 10px;
+    top: 5px;
+    transform: translate3d(0, 0, 0);
+    list-style: none;
+    transition: 5s cubic-bezier(0.21, 0.53, 0.29, 0.99);
+  }
+  .app .scope .list__item {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+  .app .scope .list__item:nth-child(2n) {
+    background: rgba(0, 0, 0, 0);
+  }
+  .app .scope .list__item.active {
+    opacity: 1;
+  }
+  .app .scope .list__item.active img {
+    transform: scale(1.05);
+  }
+  .app .scope .list__item img {
+    width: 80%;
+    height: 80%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    transition: 0.3s ease;
+  }
+  .app .start {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate3d(-50%, 20px, 0);
+    padding: 8px 25px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background: rgba(21, 108, 239, 0.95);
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 3s;
+    cursor: pointer;
+    transition: box-shadow 200ms linear;
+  }
+  .app .start:hover {
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, 0.15), 0 .4em .5em -.4em rgba(0, 0, 0, 0.4);
+}
