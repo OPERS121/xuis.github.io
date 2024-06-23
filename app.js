@@ -1,3 +1,4 @@
+localStorage.clear();
 let counter = (localStorage.getItem('counter')) ? parseInt(localStorage.getItem('counter')) : 0;
 let counters = (localStorage.getItem('counters')) ? parseInt(localStorage.getItem('counters')) : 0;
 let egg2 = (localStorage.getItem('egg2')) ? parseInt(localStorage.getItem('egg2')) : 0;
