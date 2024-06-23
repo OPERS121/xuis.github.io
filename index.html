@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"/>
+	<link rel="stylesheet" href="style.css">
+	<title>MYGAME</title>
+</head>
+<body>
+	<div class="entermenu">
+		<img src="img/background.png" alt="" id="background" class="background">
+		<img src="img/background1.png" alt="" id="background1" class="background" style="display: none;">
+		<div><a id="btnenter" class="btnenter">ВХОД</a></div>
+		<div id="circle" class="circle" style="display: none;"></div>
+	</div>
+    <div id="imagegif" class="imagegif" style="display: none;"></div>
+    <div id="clickchikentext1" class="clickchikentext" style="display: none;">+1</div>
+    <div id="clickchikentext2" class="clickchikentext" style="display: none;">+2</div>
+    <div id="clickchikentext3" class="clickchikentext" style="display: none;">+3</div>
+    <div id="clickchikentext4" class="clickchikentext" style="display: none;">+4</div>
+    <div id="clickchikentext5" class="clickchikentext" style="display: none;">+5</div>
+    <div id="clickchikentext6" class="clickchikentext" style="display: none;">+8</div>
+	<div id="container" class="container" style="display: none;">
+		<div class="ui-top">
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\coin.png">
+				<div class="value-text noselect">
+					<div class="g-text">$COIN</div>
+					<div class="v-text" id="counter">0</div>
+				</div>
+			</div>
+			<div class="ui-counter">
+				<img with="28px" height="28px" src="img\ton.png">
+				<div class="value-text noselect">
+					<div class="g-text">$TON</div>
+					<div id="ton-count" class="v-text">0</div>
+				</div>
+				<button onclick="transaction()">+</button>
+			</div>
+            <div class="ui-counter" id="openModalProfil"style="cursor: pointer;">
+				<img with="28px" height="28px" src="img\profil.png">
+				<div class="value-text noselect">
+					<div class="g-text">MENU</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-bottom">
+			<div class="ui-counters" id="openModalWheel" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\spin.png">
+				<div class="value-text noselect">
+					<div class="g-text">SPIN</div>
+				</div>
+			</div>
+			<div class="ui-counters" id="openModalShop" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\shop.png">
+				<div class="value-text">
+					<div class="g-text">SHOP</div>
+				</div>
+			</div>
+			<div class="ui-counters" id="openModalTask" style="cursor: pointer; justify-content: center;">
+				<img with="28px" height="28px" src="img\task.png">
+				<div class="value-text noselect">
+					<div class="g-text">TASK</div>
+				</div>
+			</div>
+		</div>
+        <div class="modal" id="modal_profil" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="margin-top: 60px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;">
+                <p style="font-family: Minecraft Rus; color: #312e2f; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">ПРОФИЛЬ</p>
+				<p id="counters" style="font-family: Minecraft Rus; color: #312e2f; font-size: 16px; margin: 10px; padding-left: 15px;">СДЕЛАНО КЛИКОВ: 0</p>
+                <div id="closeModalProfil" class="closeModal">X</div>
+                <div class="ui-ton" id="ton-connect"></div>
+            </div>
+        </div>
+		<div class="modalwheel" id="modal_wheel" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="width: 400px;height: 100vh;overflow-y: auto;">
+                <div id="closeModalWheel" class="closeModal">X</div>
+            </div>
+        </div>
+		<div class="modal" id="modal_task" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="margin-top: 60px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;">
+                <p style="font-family: Minecraft Rus; color: #48312E; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">МЕНЮ ЗАДАНИЙ</p>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task1.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Подписка на канал
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">+150 $COIN</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task2.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Вступить в чат
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">+150 $COIN</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\task3.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Приобрести курицу
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">+150 $COIN</a>
+                    </div>
+                </div>
+				<div id="closeModalTask" class="closeModal">X</div>
+            </div>
+        </div>
+        <div class="modal" id="modal_shop" style="flex-direction: column; justify-content: end; display: none;">
+            <div class="container-modal" style="margin-top: 60px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;">
+                <p style="font-family: Minecraft Rus; color: #312e2f; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">МАГАЗИН КУР</p>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\chiken1.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Белая
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +1 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+						<a id="buychiken1" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">FREE $COIN</a>
+                        <a id="buychiken1yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\chiken2.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Коричн.
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +2 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken2" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 15px 10px 15px; border-radius: 10px; cursor: pointer; text-align: center;">10K $COIN</a>
+                        <a id="buychiken2yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\chiken3.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Черная
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +3 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken3" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 15px 10px 15px; border-radius: 10px; cursor: pointer; text-align: center;">50K $COIN</a>
+                        <a id="buychiken3yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\chiken4.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Синяя
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +4 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken4" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">200K $COIN</a>
+                        <a id="buychiken4yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\chiken5.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Золотая
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +5 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken5" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">250K $COIN</a>
+                        <a id="buychiken5yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="img\duck.png" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 20px;">
+                            Утка
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 13px;">
+                            +8 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken6" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">500K $COIN</a>
+                        <a id="buychiken6yes" class="modal-btn" style="padding: 5px; background: rgba(21, 108, 239, 0.95); font-family: Minecraft Rus; color: #312e2f; margin-right: 15px; padding: 10px 10px 10px 10px; border-radius: 10px; cursor: pointer; text-align: center;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+				<div id="closeModalShop" class="closeModal">X</div>
+            </div>
+        </div>
+        <div id="nomoney" class="collectobject" style="display: none;">У Вас недостаточно $COIN</div>
+        <div id="noegg" class="collectobject" style="display: none;">У Вас недостаточно $EGG</div>
+        <audio id="audio" src="./img/sound.mp3"></audio>
+        <div id="wheelspin" class="app" style="display: none;">
+          <div class="scope">
+            <ul class="list"></ul>
+          </div>
+          <div class="egg-text" id="egg2">0</div>
+          <div class="egg-text" id="egg3">0</div>
+          <div class="egg-text" id="egg4">0</div>
+          <div class="egg-text" id="egg5">0</div>
+          <div class="egg-text" id="egg6">0</div>
+      
+          <button id="startwheel" onclick="start()" class="start">1K $COIN</button>
+        </div>
+	</div>
+    <div id="chikenss" class="click">
+        <img src="img/duck.png" alt="" id="duck" style="display: none;">
+        <img src="img/duckdown.png" alt="" id="duckdown" style="display: none;">
+        <img src="img/chikenbuy9.png" alt="" id="fivechiken" style="display: none;">
+        <img src="img/chikenbuy10.png" alt="" id="fivechikendown" style="display: none;">
+        <img src="img/chikenbuy7.png" alt="" id="fourchiken" style="display: none;">
+        <img src="img/chikenbuy8.png" alt="" id="fourchikendown" style="display: none;">
+        <img src="img/chikenbuy5.png" alt="" id="freechiken" style="display: none;">
+        <img src="img/chikenbuy6.png" alt="" id="freechikendown" style="display: none;">
+        <img src="img/chikenbuy3.png" alt="" id="twochiken" style="display: none;">
+        <img src="img/chikenbuy4.png" alt="" id="twochikendown" style="display: none;">
+        <img src="img/chikenbuy2.png" alt="" id="onechiken" style="display: none;">
+        <img src="img/chikenbuy1.png" alt="" id="onechikendown" style="display: none;">
+    </div>
+	</div>
+	<div class="ui-ton" id="ton-connect" style="background: none;"></div>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+	<script src="app.js"></script>
+	<div class="viewport-stable_border"></div>
+	<script>
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://opers121.github.io/xuis.github.io/tonconnect-manifest.json',
+			buttonRootId: 'ton-connect'
+
+		});
+
+		async function transaction() {
+			const transaction = {
+				validUntil: Math.round(Date.now() / 1000) + 10,
+				messages: [
+					{
+						address: "0:UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq",
+						amount: "0.1"
+					}
+				]
+			};
+
+			try {
+				await tonConnectUI.sendTransaction(transaction);
+			} catch (e) {
+				console.error(e);
+			}
+		}
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement
+           || navigator.maxTouchPoints > 0
+           || navigator.msMaxTouchPoints > 0;
+}
+
+if (hasTouch()) { // remove all :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}        
+	</script>
+</body>
+</html>
