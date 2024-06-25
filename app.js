@@ -152,7 +152,7 @@ function getcookie(name) {
 }
 
 // на сколько минут ставим таймер
-var count = 120;
+var count = 1;
 // запущен таймер или нет
 started = false;
 stop_time = new Date();
