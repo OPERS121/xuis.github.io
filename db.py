@@ -1,7 +1,7 @@
 import motor.motor_asyncio
 
 async def connect_to_mongodb():
-    mongo_uri = "mongodb://localhost:27017"  # Замените это на вашу URI MongoDB
+    mongo_uri = "https://opers121.github.io/xuis.github.io"  # Замените это на вашу URI MongoDB
     client = motor.motor_asyncio.AsyncIOMotorClient(mongo_uri)
     return client
 
