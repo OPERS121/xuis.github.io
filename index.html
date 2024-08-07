@@ -1,0 +1,555 @@
+<html lang="en" style="--tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="style.css"> 
+	
+	
+	<link href="bootstrap.min.css" rel="stylesheet">
+
+	<script src="bootstrap.bundle.min.js"></script> 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+	
+	
+	
+	<title>MYGAME</title>
+<style id="_goober">.go3783955675{background-color:rgba(229,229,234, 0.12);color:#E5E5EA;padding:9px 16px;border:none;border-radius:16px;cursor:pointer;font-size:14px;font-weight:590;line-height:18px;letter-spacing:-0.154px;transition:transform 0.1s ease-in-out;}.go3783955675:hover{transform:scale(1.04);}.go3783955675:active{transform:scale(0.96);} .go519916554{position:relative;box-shadow:0 4px 16px rgba(0, 0, 0, 0.08), 0 16px 64px rgba(0, 0, 0, 0.16);min-height:100px;width:440px;padding:44px 56px 24px;}@media (max-width: 440px){.go519916554{width:100%;}}.go3288899091{transform:translateY(-8px);margin-bottom:12px;}*{margin:0;padding:0;box-sizing:border-box;font-family:SF Pro, Roboto, sans-serif;}html, body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}*:focus{outline:#08f auto 2px;}body.using-mouse :focus{outline:none;}li{list-style:none;}button{outline:none;}.go800548454{font-style:normal;font-weight:590;font-size:15px;line-height:130%;letter-spacing:-0.24px;color:#FFFFFF;}.go2539413107{background-color:#31A6F5;color:#FFFFFF;box-shadow:0 4px 24px rgba(0,0,0, 0.16);display:flex;align-items:center;gap:9px;transition:all 0.1s ease-in-out;}.go2539413107:hover:not(:active){transform:scale(1);}.go2539413107:hover{filter:brightness(1.07);}</style></head>
+<body style="background: black;/*! display: none; */" class="d-flex fluid-container justify-content-center aling-items-center using-mouse"><div id="clickcontainer" class="nullcontainer" style="z-index: 999999999999999999999999;width: 103%;display: block;/*! max-width: 352px; *//*! max-height: 521px; */position: absolute;/*! margin-bottom: 27%; *//*! margin-top: 9%; *//*! width: 117%; */position: absolute;height: 100%;pointer-events: none;/* min-width: 186px; */"></div><div style="z-index: 99;position: absolute;width: 100%;height: 100%;display: block;min-width: 480px;max-width: 503px;" id="rot" class="justify-content-center aling-items-center using-mouse">
+		<img src="index_files/background.png" alt="" id="background" class="background" style="display: block;width: 97%;height: 100%;z-index: 3;position: absolute;">
+		<div style="height: 17%;max-height: 129px;z-index: 22; /*! display: block; */" id="noga" class="row w-99 position-absolute justify-content-center fixed-bottom p-2 ">
+			 <div style="height: 100%;max-width: 140px;" class="col"> <div style="cursor: pointer;justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);height: 87%;background-size: contain;max-width: 116px;display: block;" align="center" class="col-12 justify-content-center position-relative" id="btnenter">
+				<div style="width: 99%;max-width: 94px;max-height: 41px;" align="center" class="row fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 100%;margin-top: 18%;max-height: 60px;" class="row align-content-center justify-content-center"><div style="/*! width: 21%; */height: 48%;/*! padding-top: 100%; */" class="col"><img class="position-relative " height="100%" with="100%" src="index_files/shop.png"></div><div class="col" style="/*! padding-top: 100%; */height: 41%;">
+					<div class="justify-content-center g-text" style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 111%;">PLAY</div>
+				</div></div></div>
+				
+			</div>
+			</div>
+			 
+			 
+		</div>
+
+
+	</div>
+	
+	<div id="container" style="display: block;position: absolute;z-index: 2; /*! background-image: url(&quot;index_files/background1.png&quot;); *//*! background-repeat:no-repeat; *//*! background-size: contain; *//*! background: black; */max-width: 352px;background: black;" class="container-fluid position-absolute w-100 h-100">
+	    
+        
+        <h1>Топ игроков по балансу</h1>
+        <table id="playersTable">
+            <tr>
+                <th>Ранг</th>
+                <th>Имя</th>
+                <th>Баланс</th>
+            </tr>
+        </table>
+        
+		
+		<div style="height: 13%;max-height: 222px;" class="row w-99 position-absolute justify-content-center fixed-top p-2 ">
+			 
+			 
+			 
+		<div style="height: 87%;max-width: 140px;/*! max-height: 95px; */" class="col"> <div style="/*! cursor: pointer; */ justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);width: 100%;height: 100%;background-size: contain;max-height: 77px;" align="center" class="col-12 justify-content-center position-relative" id="coinc">
+				<div style="width: 100%;max-height: 77px;" align="center" class="d-flex row align-items-center fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 61%;margin-top: 11%;width: 100%;" class="row align-self-center justify-content-center"><div style="/*! width: 34%; *//*! height: 53%; *//*! padding-top: 100%; *//*! margin-left: -12%; */width: 34%;height: 64%;margin-left: -15%;" class="col"><img class="position-relative " height="100%" with="100%" src="index_files/coin.png" style="
+    max-width: 25px;
+    max-height: 25px;
+"></div>
+    <div style="/*! padding-top: 100%; */height: 56%;width: 53%;margin-left: -28%;" class="col align-items-center justify-content-center ">
+					<div style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 69%;" class="col justify-content-center g-text">$COIN</div><div id="counter" style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;color: green;font-size: 66%;" class="col justify-content-center g-text">0</div>
+				</div></div></div>
+				
+			</div>
+			</div><div style="height: 87%;max-width: 140px;/*! max-height: 95px; */" class="col"> <div style="/*! cursor: pointer; */ justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);width: 100%;height: 100%;background-size: contain;max-height: 77px;" align="center" class="col-12 justify-content-center position-relative" id="tonc">
+				<div style="width: 100%;max-height: 77px;" align="center" class="d-flex row align-items-center fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 61%;margin-top: 11%;width: 100%;/*! max-height: 70px; */" class="row align-self-center justify-content-center"><div style="width: 34%;height: 64%;/*! padding-top: 100%; */margin-left: -15%;/* align-items: center; *//* align-self: center; */" class="col"><img class="position-relative " height="100%" with="100%" src="index_files/ton.png" style="
+    max-width: 25px;
+    max-height: 25px;
+"></div>
+    <div style="/*! padding-top: 100%; */height: 56%;width: 53%;margin-left: -28%;" class="col align-items-center justify-content-center ">
+					<div style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 71%;font-size: 66%;" class="col justify-content-center g-text">$TON</div><diw class="dflex row justify-content-center" style="/*! height: 55%; */"><div style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;color: green;font-size: 75%;height: 8%;font-size: 66%;" class="col justify-content-center g-text" id="ton-count">0</div></diw>
+				</div></div></div>
+				
+			</div>
+			</div><div style="height: 87%;max-width: 140px;/*! max-height: 95px; */" class="col"> <div style="/*! cursor: pointer; */ justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);width: 100%;height: 100%;background-size: contain;max-height: 77px;" align="center" class="col-12 justify-content-center position-relative" id="openModalProfil">
+				<div style="width: 100%;max-height: 58px;" align="center" class="d-flex row align-items-center fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 35%;/* margin-top: -4%; */width: 100%;max-height: 47px;cursor: pointer;" class="row"><div style="/*! width: 34%; *//*! height: 53%; *//*! padding-top: 100%; *//*! margin-left: -12%; */width: 47%;height: 98%;margin-left: -15%;margin-top: 4%;" class="col align-items-center"><img class="position-relative " height="100%" with="100%" src="index_files/profil.png" style="
+    max-width: 44px;
+    max-height: 44px;
+"></div>
+    <div style="padding-top: 7%;height: 85%;width: 53%;margin-left: -28%;" class="col align-items-center justify-content-center ">
+					<div style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;/* font-size: 71%; */font-size: 66%;" class="col justify-content-center g-text">MENU</div>
+				</div></div></div>
+				
+			</div>
+			</div></div><div class="row w-99 position-absolute justify-content-center fixed-bottom p-2" style="
+    height: 31%;
+    min-height: 164px;
+    display: flex;
+"><div class="row w-99 justify-content-center" style="height: 100%;max-height: 53px;z-index: 22;max-width: 167px;display: flex;/* align-self: end; *//* float: left; */margin-left: 67%;"><div id="opentopplayers" class="col" style="height: 68%;max-width: 35px;/*! max-height: 95px; */position: relative;padding: 2px;/* left: 0; */margin-top: 7%;">
+            <img src="index_files/top.png" style="
+    width: 100%;
+"> 
+        </div><div id="openrefmenu" class="col" style="height: 84%;max-width: 67px;/*! max-height: 95px; */">
+            <img src="index_files/ref.png" style="
+    width: 100%;
+"> 
+        </div></div><div style="height: 100%;max-height: 50px;z-index: 22;display: inline-block;position: relative;margin-bottom: 7%;" class="row w-99 justify-content-center fixed-bottom p-2 "><a id="farming" class="farming" style="display: none;height: 100%;top: 0px;">FARMING </a><a id="startfarming" class="startfarming" style="display: block;height: 100%;top: 0px;">FARMING</a></div><div style="height: 100%;max-height: 85px;z-index: 22;" class="row w-99 justify-content-center p-2 ">
+			 <div style="height: 100%;max-width: 140px;/*! max-height: 95px; */" class="col"> <div id="openModalWheel" style="cursor: pointer; justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);/*! width: 100%; */height: 87%;background-size: contain;max-width: 104px;" align="center" class="col-12 justify-content-center position-relative">
+				<div style="width: 99%;max-width: 104px;" align="center" class="row fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 70%;margin-top: 12%;" class="row justify-content-center"><div style="/*! width: 21%; */height: 48%;/*! padding-top: 100%; */" class="col"><img src="index_files/spin.png" class="position-relative " height="100%" with="100%"></div><div class="col" style="/*! padding-top: 100%; */height: 41%;">
+					<div class="justify-content-center g-text" style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 66%;">SPIN</div>
+				</div></div></div>
+				
+			</div>
+			</div><div style="height: 100%;max-width: 140px;" class="col"> <div style="cursor: pointer; justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);/*! width: 100%; */height: 87%;background-size: contain;max-width: 104px;" align="center" class="col-12 justify-content-center position-relative" id="openModalShop">
+				<div style="width: 99%;max-width: 86px;" align="center" class="row fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 70%;margin-top: 12%;" class="row align-content-center justify-content-center"><div style="/*! width: 21%; */height: 46%;/*! padding-top: 100%; */" class="col"><img class="position-relative " height="100%" with="100%" src="index_files/shop.png"></div><div class="col" style="/*! padding-top: 100%; */height: 39%;">
+					<div class="justify-content-center g-text" style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 66%;">SHOP</div>
+				</div></div></div>
+				
+			</div>
+			</div><div style="height: 100%;max-width: 140px;" class="col"> <div style="cursor: pointer; justify-content: center;background-repeat: no-repeat;background-image: url(&quot;index_files/item.png&quot;);/*! width: 100%; */height: 87%;background-size: contain;max-width: 104px;" align="center" class="col-12 justify-content-center position-relative" id="openModalTask">
+				<div style="width: 99%;" align="center" class="row fixed-top justify-content-center position-relative h-100 "><div style="/*! width: 97%; */height: 70%;margin-top: 12%;/* padding: 1%; */" class="row justify-content-center"><div style="/*! width: 21%; */height: 48%;/*! padding-top: 100%; */" class="col"><img class="position-relative " height="100%" with="100%" src="index_files/task.png"></div><div class="col" style="/*! padding-top: 100%; */height: 41%;">
+					<div class="justify-content-center g-text" style="/*! font-family: &quot;Minecraft Rus&quot;, serif; */margin-top: 0;font-size: 66%;">TASK</div>
+				</div></div></div>
+				
+			</div>
+			</div></div></div>
+
+            
+        <div class="row justify-content-center align-items-center align-self-center" style="/*! height: 26%; */width: 100%;height: 100%;position: absolute;max-width: 380px;max-height: 626px;z-index: 4;pointer-events: none;margin-top: 5%;"><div id="back" style="width: 100%;height: 100%;background-size: contain;top: 17%;" class="col justify-content-center align-items-center align-self-center">
+             <div style="width: 100%;/*! position: absolute; *//* background-image: url(&quot;index_files/background1.png&quot;); */height: 100%;/*! position: absolute; */background-size: contain;background-repeat: no-repeat;/*! background-position-y: 18%; *//*! margin-bottom: 27%; */"><div id="chikenss" class="click" style="z-index: 2; width: 100%; display: block; max-width: 352px; max-height: 112px; position: sticky; margin-top: 9%; pointer-events: all;">
+        <img src="index_files/rabbit.png" alt="" id="rabbit" style="display: none;-webkit-user-drag: none;user-select: none;" draggable="false">
+        
+        <img src="index_files/duck.png" alt="" id="duck" style="display: none; -webkit-user-drag: none; user-select: none;">
+        
+        <img src="index_files/chikenbuy9.png" alt="" id="fivechiken" style="display: none; -webkit-user-drag: none; user-select: none;">
+        
+        <img src="index_files/chikenbuy7.png" alt="" id="fourchiken" style="display: none; -webkit-user-drag: none; user-select: none;">
+        
+        <img src="index_files/chikenbuy5.png" alt="" id="freechiken" style="display: none; -webkit-user-drag: none; user-select: none;">
+        
+        <img src="index_files/chikenbuy3.png" alt="" id="twochiken" style="display: none; -webkit-user-drag: none; user-select: none;">
+        
+        <img src="index_files/chikenbuy2.png" alt="" id="onechiken" style="display: none; user-select: none; width: 41%; height: 23%; position: relative; min-width: 143px; min-height: 144px;" draggable="false">
+        
+    </div><div id="chikenssw" class="click" style="z-index: 2;width: 100%;display: block;max-width: 352px;max-height: 112px;position: sticky;margin-top: 80%;pointer-events: all;">
+        
+        <img src="index_files/rabbitdown.png" alt="" id="rabbitdown" style="display: none; -webkit-user-drag: none; user-select: none; min-width: 143px; min-height: 123px; width: 41%; height: 17%;" draggable="false">
+        
+        <img src="index_files/duckdown.png" alt="" id="duckdown" style="-webkit-user-drag: none; display: none; user-select: none; min-width: 143px; min-height: 123px; width: 41%; height: 17%;">
+        
+        <img src="index_files/chikenbuy10.png" alt="" id="fivechikendown" style="display: none;user-drag: none;-webkit-user-drag: none;user-select: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;display: none;user-select: none;min-width: 143px;min-height: 123px;width: 41%;height: 17%;">
+        
+        <img src="index_files/chikenbuy8.png" alt="" id="fourchikendown" style="display: none;user-drag: none;-webkit-user-drag: none;user-select: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;display: none;user-select: none;min-width: 143px;min-height: 123px;width: 41%;height: 17%;">
+        
+        <img src="index_files/chikenbuy6.png" alt="" id="freechikendown" style="display: none;user-drag: none;-webkit-user-drag: none;user-select: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;display: none;user-select: none;min-width: 143px;min-height: 123px;width: 41%;height: 17%;">
+        
+        <img src="index_files/chikenbuy4.png" alt="" id="twochikendown" style="display: none;user-drag: none;-webkit-user-drag: none;user-select: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;display: none;user-select: none;min-width: 143px;min-height: 123px;width: 41%;height: 17%;">
+        
+        <img src="index_files/chikenbuy1.png" alt="" id="onechikendown" style="display: none; user-select: none; min-width: 143px; min-height: 123px; width: 41%; height: 17%;" draggable="false">
+    </div></div>
+        </div></div><div class="row justify-content-center align-items-center align-self-center" style="/*! height: 26%; */width: 100%;height: 100%;position: absolute;max-width: 380px;max-height: 626px;z-index: 3;pointer-events: none;margin-top: 12%;"><div id="back" style="width: 100%;height: 100%;background-size: contain;top: 17%;" class="col justify-content-center align-items-center align-self-center">
+             <div style="width: 100%;/*! position: absolute; */background-image: url(&quot;index_files/background1.png&quot;);height: 100%;/*! position: absolute; */background-size: contain;background-repeat: no-repeat;/*! background-position-y: 18%; *//*! margin-bottom: 27%; */"></div>
+        </div></div><div id="clickchikentext1" class="clickchikentext" style="display: block;">+1</div>
+        <div id="clickchikentext2" class="clickchikentext" style="display: none;">+2</div>
+        <div id="clickchikentext3" class="clickchikentext" style="display: none;">+3</div>
+        <div id="nomoney" class="collectobject justify-content-center align-items-center align-self-center" style="position: absolute; font-family: &quot;Minecraft Rus&quot;; color: rgb(255, 255, 255); text-align: center; font-size: 108%; top: 12%; z-index: 11111111; width: 100%; display: none;">У Вас недостаточно $COIN</div><div id="noegg" class="collectobject justify-content-center align-items-center align-self-cente" style="position: absolute; font-family: &quot;Minecraft Rus&quot;; color: rgb(255, 255, 255); text-align: center; font-size: 108%; top: 12%; z-index: 11111111; width: 100%; display: none;">У Вас недостаточно $EGG</div><div id="clickchikentext4" class="clickchikentext" style="display: none;">+4</div>
+        <div id="clickchikentext5" class="clickchikentext" style="display: none;">+5</div>
+        <div id="clickchikentext6" class="clickchikentext" style="display: block;">+8</div>
+        <div id="clickchikentext7" class="clickchikentext" style="display: block;">+10</div>
+        <div id="modal_profil" class="w-99 justify-content-center align-items-center align-self-center fixed-top p-2" style="flex-direction: column; justify-content: end; display: none; background-repeat: no-repeat; width: 100%; background-image: url(&quot;index_files/backgroundTask.png&quot;); background-size: contain;" index_files="" background-size:="" max-width:="" position:="" margin-top:="">
+            <div style="margin-top: 60px; margin-left: 33px; width: 85%;height: 100vh;overflow-y: auto;" class="justify-content-center align-items-center align-self-center"><p style="font-family: Minecraft Rus; color: #312e2f; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">ПРОФИЛЬ</p><div class="row" style="position: absolute;width: 82%;height: 60%;">
+                
+				<div style="/*! position: absolute; *//*! width: 86%; *//*! max-width: 33%; *//*! width: 24%; *//*! max-width: 101%; */margin-left: 4%;height: 26%;" class="col"><div style="/*! position: absolute; */width: 100%;height: 61%;" class="row"><div style="max-width: 154px;" class="col"><img alt="" style="/*! border-radius: 10px; */ /*! margin: 10px 5px; */ /*! padding-left: 15px; */ /*! width: 25%; */ /*! height: 34%; *//*! position: absolute; *//*! position: relative; *//*! width: 96%; *//*! min-width: 48px; */width: 100%;margin-top: 7%;" src="index_files/profil.png"></div><div style="width: 100%;height: 100%;" class="col"><p style="/*! position: absolute; */ font-family: Minecraft Rus; color: #312e2f; /*! font-size: 65%; */ /*! top: 102px; */ /*! padding-left: 90px; */width: 100%;font-size: 113%;padding: 0;margin-top: 0;/*! margin-bottom: 6%; */margin-bottom: 5%;font-size: 90%;" id="balance" class="col-4 col-sm-12">0 $COIN</p><p style="/*! position: absolute; */ font-family: Minecraft Rus; color: #312e2f; /*! font-size: 13px; */ /*! top: 122px; */ /*! padding-left: 90px; *//*! font-size: 62%; *//*! width: 100%; *//*! font-size: 113%; *//*! padding: 0; *//*! margin-top: 0; */width: 100%;/*! font-size: 113%; */padding: 0;margin-top: 0;margin-bottom: 5%;font-size: 90%;" id="counters" class="col-4 col-sm-12">КЛИКОВ ПО КУРИЦЕ: 1.65K</p><p style="/*! position: absolute; */ font-family: Minecraft Rus; color: #312e2f; font-size: 13px; /*! top: 168px; */ /*! padding-left: 20px; */width: 100%;font-size: 90%;padding: 0;margin-top: 0;margin-bottom: 5%;" id="afkclaim" class="col-4 col-sm-12">AFK CLAIM: 0</p><p style="/*! position: absolute; */ font-family: Minecraft Rus; color: #312e2f; font-size: 13px; /*! top: 142px; */ /*! padding-left: 90px; */width: 100%;font-size: 113%;padding: 0;margin-top: 0;margin-bottom: 5%;font-size: 90%;" id="counterspin" class="col-4 col-sm-12">ПРОКРУТОВ РУЛЕТКИ: 13</p></div></div></div>
+  <div class="col-4 col-sm-12" style="width: 100%;margin-top: 21%;"><div class="row" style="height: 28%;width: 100%;"><p style="/*! position: absolute; */font-family: Minecraft Rus; /*! color: #312e2f; */ /*! font-size: 13px; */ /*! top: 188px; */ /*! padding-left: 20px; */width: 75%;font-size: 97%;" class="col-12 col-md-8">НАСТРОЙКА ЗВУКА:</p><div style="width: 10%;/*! position: absolute; */" class="col"><img src="index_files/soundoff.png" alt="" id="soundon" style="display: none; width: 84%; margin-top: -16%;"><img src="index_files/soundon.png" alt="" id="soundoff" style="display: block; width: 84%; margin-top: -16%;"></div></div></div><div id="ton-connect" style="/*! max-height: 100px; */width: 100%;" class="d-flex col-4 col-sm-12 justify-content-center align-items-center align-self-center"></div></div>
+                
+                
+                
+                
+                
+                <div id="closeModalProfil" class="closeModal">X</div>
+                
+                
+                
+            </div>
+        </div>
+        <div id="modal_top" class="w-99 justify-content-center align-items-center align-self-center fixed-top p-2" style="flex-direction: column; justify-content: end; display: none; background-repeat: no-repeat; width: 100%; background-image: url(&quot;index_files/backgroundTask.png&quot;); margin-top: 2%; max-width: 376px; background-size: contain; position: absolute; height: 100%;" index_files="" background-size:="">
+            <div class="container-modal" style="margin-top: 60px; margin-left: 33px; width: 85%;/*! height: 100vh; */overflow-y: auto;height: 100%;max-height: 553px;">
+                <p style="font-family: Minecraft Rus; color: #312e2f; font-size: 24px; text-align: center; padding: 0; margin: 0;">ТОП ИГРОКОВ</p>
+                <div id="closeModalTop" class="closeModal">X</div>
+                <div class="player" style="/*! max-height: 50%; */">
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div>
+                    <div class="player-text">0</div><div class="player-text">0</div><div class="player-text">0</div><div class="player-text">0</div>
+                  </div>
+            </div>
+        </div>
+		<div id="modal_wheel" style="flex-direction: column; justify-content: end; display: none; position: absolute; width: 100%; height: 100%; z-index: 1111111; background: black;" class="w-99 justify-content-center align-items-center align-self-center fixed-top">
+            <div class="container-modal" style="width: 100%;height: 100%;overflow-y: auto;/*! background: url(&quot;index_files/backgroundwheelspin.png&quot;) no-repeat; */">
+                <div id="nopobeda" class="collectobject justify-content-center align-items-center align-self-cente" style="position: absolute; font-family: &quot;Minecraft Rus&quot;; color: rgb(255, 255, 255); text-align: center; font-size: 108%; top: 14%; z-index: 99; width: 100%; display: none;">Повезет в другой раз</div><p style="position:absolute; font-family: Minecraft Rus; color: #fff; text-align:center; font-size: 108%; top: 27%;z-index: 99;">Яйца необходимы для приобретения новых кур</p>
+                <div id="closeModalWheel" class="closeModal" style="z-index: 99; display: block;">X</div>
+            <div id="wheelspin" class="appp" style="display: none; position: absolute; top: 38%; z-index: 99; height: 61%; width: 100%; left: 0px;">
+          <div id="back" style="background: url(&quot;index_files/backgroundwheelspin.png&quot;) no-repeat;/*! z-index: 98; */width: 101%;height: 37%;background-size: contain;top: -3%;position: absolute;z-index: 1;/* left: 8%; *//*! background-image: url(&quot;index_files/backgroundwheelspin.png&quot;) no-repeat; */" class="backk">X</div><div class="scope" style="width: 80%;margin-left: 11%;/*! left: 0%; */z-index: 11;position: relative;height: 23%;min-height: 80px;/* max-height: 86px; */margin-top: 6%;">
+    <ul class="list"><li data-item="{&quot;name&quot;:&quot;chiken3&quot;,&quot;img&quot;:&quot;img/egg3.png&quot;,&quot;chance&quot;:7.5}" class="list__item">
+      <img src="img/egg3.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;rabbit&quot;,&quot;img&quot;:&quot;img/egg7.png&quot;,&quot;chance&quot;:1}" class="list__item">
+      <img src="img/egg7.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken5&quot;,&quot;img&quot;:&quot;img/egg5.png&quot;,&quot;chance&quot;:3}" class="list__item">
+      <img src="img/egg5.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken2&quot;,&quot;img&quot;:&quot;img/egg2.png&quot;,&quot;chance&quot;:12.5}" class="list__item">
+      <img src="img/egg2.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken5&quot;,&quot;img&quot;:&quot;img/egg5.png&quot;,&quot;chance&quot;:3}" class="list__item">
+      <img src="img/egg5.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken5&quot;,&quot;img&quot;:&quot;img/egg5.png&quot;,&quot;chance&quot;:3}" class="list__item">
+      <img src="img/egg5.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken3&quot;,&quot;img&quot;:&quot;img/egg3.png&quot;,&quot;chance&quot;:7.5}" class="list__item">
+      <img src="img/egg3.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken3&quot;,&quot;img&quot;:&quot;img/egg3.png&quot;,&quot;chance&quot;:7.5}" class="list__item">
+      <img src="img/egg3.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li><li data-item="{&quot;name&quot;:&quot;chiken1&quot;,&quot;img&quot;:&quot;img/egg1.png&quot;,&quot;chance&quot;:70}" class="list__item">
+      <img src="img/egg1.png" alt="">
+    </li></ul>
+  </div>
+          <button id="startwheel" onclick="start()" class="start align-self-center" style="display: block; position: relative; top: 12%; align-content: center; z-index: 12;">1K $COIN</button><div class="row egg" style="
+    position: relative;
+*/
+    align-self: center;
+    align-content: center;
+    align-self: center;
+    top: 19%;
+    z-index: 13;
+    left: auto;
+    width: 102%;">
+            <div class="col" style="max-width: 16%;"><img class="egg-text" src="index_files/egg2_002.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg2">2</div></div><div class="col" style="max-width: 17%;"><img class="egg-text" src="index_files/egg3_002.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg3">1</div></div><div class="col" style="max-width: 17%;"><img class="egg-text" src="index_files/egg4_002.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg4">1</div></div><div class="col" style="max-width: 17%;"><img class="egg-text" src="index_files/egg5_002.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg5">1</div></div>
+            
+            
+            
+            
+            <div class="col" style="max-width: 17%;"><img class="egg-text" src="index_files/egg6_002.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg6">0</div></div><div class="col" style="max-width: 16%;"><img class="egg-text" src="index_files/egg7.png" style="width: 50px; height: 50px;"><div class="egg-text" id="egg7">0</div></div>
+            
+            
+            
+            
+            
+            
+          </div>
+          
+        </div></div>
+        </div>
+		<div id="modal_task" class="w-99 justify-content-center align-items-center align-self-center fixed-top p-2" style="flex-direction: column; justify-content: end; display: none; background-repeat: no-repeat; width: 100%; background-image: url(&quot;index_files/backgroundTask.png&quot;); background-size: contain; max-width: 376px; position: absolute; margin-top: 2%;" index_files="" height:="" margin-top:="" max-width:="" position:="">
+            <div style="margin-top: 60px;margin-left: 33px;width: 85%;height: 100vh;overflow-y: auto;max-width: 284px;" class="ustify-content-center align-items-center align-self-center">
+                <p style="font-family: Minecraft Rus; color: #48312E; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">МЕНЮ ЗАДАНИЙ</p>
+                <div class="modal-item" style="display: flex;padding: 4px;justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/task1.png" style="/*! width: 50px; */ /*! height: 50px; */width: 72%;/* margin-top: 11%; */margin-right: 16%;margin-top: 4%;">
+                    </div>
+                    <div class="modal-text" style="position: absolute; margin: 5px; left: 95px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus;color: #312e2f;font-size: 79%;width: 74%;">
+                            Вступить в канал
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="enterchanel" class="modal-btn" style="display: block;">+150 $COIN</a>
+                        <a id="enterchanelyes" class="modal-btn" style="display: none;">ВЫПОЛНЕНО</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/task2.png" style="/*! width: 50px; */ /*! height: 50px; */width: 72%;/* margin-top: 11%; */margin-right: 16%;margin-top: 4%;">
+                    </div>
+                    <div class="modal-text" style="position: absolute; margin: 5px; left: 95px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus;color: #312e2f; /*! font-size: font-size: 98%; */font-size: 98%;font-size: 80%;width: 74%;">
+                            Вступить в чат
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="enterchanel2" class="modal-btn" style="display: block;">+300 $COIN</a>
+                        <a id="enterchanel2yes" class="modal-btn" style="display: none;">ВЫПОЛНЕНО</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/task3.png" style="width: 72%;margin-top: 4%;margin-right: 16%;">
+                    </div>
+                    <div class="modal-text" style="position: absolute; margin: 5px; left: 95px; width: 100px;">
+                        <div class="title-text" style="font-family: Minecraft Rus;color: #312e2f; /*! font-size: 20px; */font-size: 98%;font-size: 81%;width: 74%;/* margin-top: 3%; */">
+                            Купить курицу
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="enterchanel3" class="modal-btn" style="display: block;">+500 $COIN</a>
+                        <a id="enterchanel3yes" class="modal-btn" style="display: none;">ВЫПОЛНЕНО</a>
+                    </div>
+                </div>
+				<div id="closeModalTask" class="closeModal">X</div>
+            </div>
+        </div>
+        <div style="flex-direction: column; justify-content: end; display: none; background-repeat: no-repeat; width: 100%; background-size: contain; background-image: url(&quot;index_files/backgroundTask.png&quot;); height: 100%; margin-top: 2%; max-height: 658px; position: absolute;" id="modal_shop" class="w-99 justify-content-center align-items-center align-self-center fixed-top p-2">
+            <div style="margin-top: 60px; /*! margin-left: 33px; */ /*! width: 85%; *//*! height: 100vh; */overflow-y: auto;background-repeat: no-repeat;padding: 7%;overflow-x: hidden;margin-left: -2%;width: 102%;max-width: 357px;" class="container-modal">
+                <p style="font-family: Minecraft Rus; color: #312e2f; font-size: 24px; padding: 0; margin: 0; padding-left: 15px;">МАГАЗИН КУР</p>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 18px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken1.png" style="width: 67%; /*! height: 50px; */">
+                    </div>
+                    <div class="modal-text" style="margin-left: -10%; width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Белая
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +1 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+						<a id="buychiken1" class="modal-btn" style="padding: 10px 20px; display: none;">1K $COIN</a>
+                        <a id="buychiken1yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken2.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="/*! margin-left: -20px; */ /*! width: 100px; */margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Коричн.
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +2 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken2" class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: &quot;Minecraft Rus&quot;; color: rgb(49, 46, 47); margin-right: 15px; padding: 10px 15px; border-radius: 10px; cursor: pointer; text-align: center; display: none;">10K $COIN</a>
+                        <a id="buychiken2yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken3.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Черная
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +3 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken3" class="modal-btn" style="background: rgba(21, 108, 239, 0.95); font-family: &quot;Minecraft Rus&quot;; color: rgb(49, 46, 47); margin-right: 15px; padding: 10px 15px; border-radius: 10px; cursor: pointer; text-align: center; display: none;">50K $COIN</a>
+                        <a id="buychiken3yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken4.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Синяя
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +4 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken4" class="modal-btn" style="display: none;">200K $COIN</a>
+                        <a id="buychiken4yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken5.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Золотая
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +5 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken5" class="modal-btn" style="display: none;">250K $COIN</a>
+                        <a id="buychiken5yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken6.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Утка
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +8 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken6" class="modal-btn" style="display: none;">500K $COIN</a>
+                        <a id="buychiken6yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+                <div class="modal-item" style="display: flex; padding: 5px; justify-content: space-between;">
+                    <div class="img-container" style="width: 55px; margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="index_files/chiken7.png" style="/*! width: 50px; */ /*! height: 50px; */width: 67%;">
+                    </div>
+                    <div class="modal-text" style="margin-left: -20px; width: 100px;margin-left: -10%;width: 26%;">
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #312e2f; font-size: 98%;">
+                            Кролик
+                        </div>
+                        <div class="title-text" style="font-family: Minecraft Rus; color: #252324; font-size: 70%;">
+                            +10 $COIN
+                        </div>
+                    </div>
+                    <div class="modal-btn-container" style="display: flex; justify-content: center; align-items: center;">
+                        <a id="buychiken7" class="modal-btn" style="display: none;">650K $COIN</a>
+                        <a id="buychiken7yes" class="modal-btn" style="display: block;">ПРИОБРЕЛИ</a>
+                    </div>
+                </div>
+				<div id="closeModalShop" class="closeModal">X</div>
+            </div>
+        </div>
+        
+        
+        
+        <audio id="audio" src="index_files/sound.mp3" loop=""></audio>
+        
+	</div>
+    
+	
+	<div class="ui-ton" id="ton-connect" style="background: none;"></div>
+	<script src="index_files/telegram-web-app.js"></script>
+	<script src="index_files/tonconnect-ui.min.js"></script>
+	<script src="app.js"></script>
+	<div class="viewport-stable_border"></div>
+	<script>
+         // Инициализация Telegram Web App
+         const webapp = window.Telegram.WebApp;
+        webapp.ready();
+
+        // Массив игроков (в реальном приложении данные могут приходить с сервера)
+        const players = [
+            { name: "Игрок 1", balance: 1000 },
+            { name: "Игрок 2", balance: 1500 },
+            { name: "Игрок 3", balance: 800 },
+            { name: "Игрок 4", balance: 2000 },
+            { name: "Игрок 5", balance: 1200 }
+        ];
+
+        // Сортировка игроков по балансу (по убыванию)
+        players.sort((a, b) => b.balance - a.balance);
+
+        // Получение ссылки на таблицу
+        const table = document.getElementById("playersTable");
+
+        // Добавление игроков в таблицу
+        players.forEach((player, index) => {
+            const row = table.insertRow();
+            const rankCell = row.insertCell(0);
+            const nameCell = row.insertCell(1);
+            const balanceCell = row.insertCell(2);
+            rankCell.textContent = index + 1;
+            nameCell.textContent = player.name;
+            balanceCell.textContent = player.balance;
+        });
+
+        // Настройка темы Telegram
+        document.body.style.backgroundColor = webapp.themeParams.bg_color;
+        document.body.style.color = webapp.themeParams.text_color;
+
+
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://opers121.github.io/xuis.github.io/tonconnect-manifest.json',
+			buttonRootId: 'ton-connect'
+
+		});
+
+		async function transaction() {
+			const transaction = {
+				validUntil: Math.round(Date.now() / 1000) + 10,
+				messages: [
+					{
+						address: "0:UQAvfMHdZsr0pl6aZr2rrdscYjyr1Gyjzj9cqCg9B3JBY7Nq",
+						amount: "0.1"
+					}
+				]
+			};
+
+			try {
+				await tonConnectUI.sendTransaction(transaction);
+			} catch (e) {
+				console.error(e);
+			}
+		}
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement
+           || navigator.maxTouchPoints > 0
+           || navigator.msMaxTouchPoints > 0;
+}
+
+if (hasTouch()) { // remove all :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}        
+	</script>
+
+</body></html>
